@@ -1,0 +1,11 @@
+.Portal {
+}
+
+.Modal {
+  min-height: 150px;
+  min-width: 300px;
+}
+
+.Overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}

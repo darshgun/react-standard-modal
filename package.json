@@ -1,0 +1,44 @@
+{
+  "name": "react-standard-modal",
+  "version": "0.1.0",
+  "description": "A clean & simple modal component for React",
+  "main": "dist/index.js",
+  "source": "dist/umd/react-standard-modal.min.js",
+  "scripts": {
+    "dev": "parcel serve example/src/index.html",
+    "format": "prettier \"src/**/*.{js,json}\" --write",
+    "lint": "eslint \"src/**/*.js\" --quiet",
+    "build-watch": "yarn bili --watch",
+    "build": "yarn bili",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "modal",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darshgun/react-standard-modal"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "Darshana Gunawardana",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.4",
+    "react-dom": "^16.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-react": "^7.12.7",
+    "bili": "^5.0.5",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "parcel-bundler": "^1.12.4",
+    "eslint-plugin-react": "^7.21.5",
+    "postcss-modules": "^3.2.2",
+    "prettier": "^2.2.0"
+  }
+}

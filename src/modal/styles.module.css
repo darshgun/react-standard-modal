@@ -1,0 +1,28 @@
+/* For testing only */
+.Portal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1040;
+}
+
+.Modal {
+  background-color: white;
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  z-index: 1;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Hidden {
+  display: none;
+}
