@@ -1,0 +1,36 @@
+{
+  "name": "react-standard-modal",
+  "version": "0.1.4",
+  "description": "A clean & simple modal component for React",
+  "main": "./index.js",
+  "source": "dist/umd/react-standard-modal.min.js",
+  "keywords": [
+    "modal",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darshgun/react-standard-modal"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "Darshana Gunawardana",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.4.0",
+    "react-dom": ">=16.4.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
+  "umd:main": "./umd/react-standard-modal.js",
+  "unpkg": "./umd/react-standard-modal.js",
+  "module": "./index.module.js",
+  "exports": {
+    ".": {
+      "import": "./index.module.js",
+      "require": "./index.js"
+    }
+  }
+}
