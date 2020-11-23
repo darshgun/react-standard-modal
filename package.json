@@ -1,6 +1,6 @@
 {
   "name": "react-standard-modal",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "A clean & simple modal component for React",
   "main": "dist/index.js",
   "source": "dist/umd/react-standard-modal.min.js",
@@ -31,6 +31,9 @@
     "react": ">=16.4.0",
     "react-dom": ">=16.4.0"
   },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/node": "^7.12.6",
@@ -39,7 +42,6 @@
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "bili": "^5.0.5",
-    "classnames": "^2.2.6",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-react": "^7.21.5",
     "fs-extra": "^9.0.1",
