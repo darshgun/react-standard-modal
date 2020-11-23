@@ -12,8 +12,7 @@
     "prebuild": "rimraf dist",
     "build-watch": "yarn bili --watch",
     "build": "yarn bili && yarn copy-build-files",
-    "publish-build": "np --contents=dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish-build": "np --contents=dist"
   },
   "keywords": [
     "modal",
