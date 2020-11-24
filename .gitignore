@@ -2,6 +2,7 @@
 node_modules
 dist
 .cache
+.parcel-cache
 .module-cache
 *.log*
 *.sublime-project

@@ -32,13 +32,14 @@
     "react-dom": ">=16.4.0"
   },
   "dependencies": {
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "react-dom": "16.14"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
+    "@babel/core": "^7.12.8",
     "@babel/node": "^7.12.6",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "bili": "^5.0.5",
@@ -46,10 +47,10 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-react": "^7.21.5",
     "fs-extra": "^9.0.1",
-    "np": "^7.0.0",
-    "parcel-bundler": "^1.12.4",
+    "parcel": "^2.0.0-beta.1",
     "postcss-modules": "^3.2.2",
     "prettier": "^2.2.0",
+    "prop-types": "^15.7.2",
     "rimraf": "^3.0.2"
   }
 }
