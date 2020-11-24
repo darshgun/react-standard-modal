@@ -1,6 +1,6 @@
 {
   "name": "react-standard-modal",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "A clean & simple modal component for React",
   "main": "dist/index.js",
   "source": "dist/umd/react-standard-modal.min.js",
