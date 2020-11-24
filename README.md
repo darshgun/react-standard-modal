@@ -46,16 +46,16 @@ function App() {
 
 ## API documentation
 
-| Property            | Type        | Default value   | Description                                                                         |
-| ------------------- | ----------- | --------------- | ----------------------------------------------------------------------------------- |
-| **className**       | object      |                 | Object that contains custom classes for Modal, Portal & Overlay components          |
-| **container**       | DOM element | `document.body` | The dom element which will have the Portal append to it                             |
-| **open**            | bool        | `false`         | Describes if the modal should be open or not                                        |
-| **unMountIfClosed** | bool        | `false`         | Describes whether the modal should be removed from dom when closed                  |
-| **style**           | object      |                 | Object that contains inline styles objects for Modal, Portal and Overlay components |
-| **disableOverlay**  | bool        | `false`         | Describes whether the Overlay should be shown or not                                |
-| **overlayRef**      | ref         |                 | Overlay ref callback                                                                |
-| **overlayClick**    | func        |                 | Callback fired when clicking on the Overlay component                               |
+| Property            | Type   | Default value         | Description                                                                         |
+| ------------------- | ------ | --------------------- | ----------------------------------------------------------------------------------- |
+| **className**       | object |                       | Object that contains custom classes for Modal, Portal & Overlay components          |
+| **container**       | func   | `() => document.body` | Function that returns the dom element which will have the Portal append to it       |
+| **open**            | bool   | `false`               | Describes if the modal should be open or not                                        |
+| **unMountIfClosed** | bool   | `false`               | Describes whether the modal should be removed from dom when closed                  |
+| **style**           | object |                       | Object that contains inline styles objects for Modal, Portal and Overlay components |
+| **disableOverlay**  | bool   | `false`               | Describes whether the Overlay should be shown or not                                |
+| **overlayRef**      | ref    |                       | Overlay ref callback                                                                |
+| **overlayClick**    | func   |                       | Callback fired when clicking on the Overlay component                               |
 
 ## License
 
