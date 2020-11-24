@@ -1,6 +1,6 @@
 {
   "name": "react-standard-modal",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "description": "A clean & simple modal component for React",
   "main": "dist/index.js",
   "source": "dist/umd/react-standard-modal.min.js",
@@ -8,9 +8,11 @@
     "dev": "parcel serve example/src/index.html",
     "format": "prettier \"src/**/*.{js,json}\" --write",
     "lint": "eslint \"src/**/*.js\" --quiet",
+    "copy-build-files": "babel-node ./scripts/copy-build-files.js",
+    "prebuild": "rimraf dist",
     "build-watch": "yarn bili --watch",
-    "build": "yarn bili",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "yarn bili && yarn copy-build-files",
+    "publish-build": "np --contents=dist"
   },
   "keywords": [
     "modal",
@@ -25,20 +27,31 @@
   },
   "author": "Darshana Gunawardana",
   "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.4.0",
+    "react-dom": ">=16.4.0"
+  },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "react": "^16.4",
-    "react-dom": "^16.4"
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
+    "@babel/core": "^7.12.8",
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "bili": "^5.0.5",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
-    "parcel-bundler": "^1.12.4",
     "eslint-plugin-react": "^7.21.5",
+    "fs-extra": "^9.0.1",
+    "parcel": "^2.0.0-beta.1",
     "postcss-modules": "^3.2.2",
-    "prettier": "^2.2.0"
+    "prettier": "^2.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "rimraf": "^3.0.2"
   }
 }
