@@ -32,8 +32,7 @@
     "react-dom": ">=16.4.0"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "react-dom": "16.14"
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.8",
@@ -51,6 +50,8 @@
     "postcss-modules": "^3.2.2",
     "prettier": "^2.2.0",
     "prop-types": "^15.7.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "rimraf": "^3.0.2"
   }
 }
