@@ -1,10 +1,8 @@
-import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 
 const propTypes = {
   children: PropTypes.node,
-  container: PropTypes.func,
   disablePortal: PropTypes.bool,
 };
 
@@ -16,11 +14,7 @@ const Portal = ({ children, container, disablePortal }) => {
     return children;
   }
 
-  if (container) {
-    return createPortal(children, container);
-  }
-
-  return;
+  return createPortal(children, container);
 };
 
 Portal.propTypes = propTypes;

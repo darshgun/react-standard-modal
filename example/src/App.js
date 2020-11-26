@@ -4,9 +4,10 @@ import Modal from '../../src';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleOverlayClick = () => {
+  const handleOpen = () => console.log('Opening');
+  const handleClose = () => {
     setIsOpen(false);
+    console.log('Closing');
   };
 
   return (
@@ -18,7 +19,6 @@ function App() {
       >
         Open modal
       </button>
-
       <Modal
         /**
          * Custom class names
@@ -28,6 +28,15 @@ function App() {
           Modal: 'modal-class',
           Overlay: 'overlay-class',
         }}
+        // closeOnOverlayClick={false}
+        // container={document.body}
+        // disableOverlayClick={true}
+        // disableOverlay={true}
+        // disablePortal={true}
+        onClose={handleClose}
+        onOpen={handleOpen}
+        open={isOpen}
+        // overlayClick={() => {}}
         /**
          * Custom styles
          */
@@ -41,15 +50,12 @@ function App() {
             backgroundColor: 'rgba(0, 0, 0, 0.8)',
           },
         }}
-        open={isOpen}
-        container={document.body}
-        /**
-         * Overlay related properties
-         */
-        overlayClick={() => handleOverlayClick()}
+        unMountIfClosed={false}
       >
         Modal demo
       </Modal>
+      <br />
+      Is open: <span dangerouslySetInnerHTML={{ __html: isOpen }} />
     </div>
   );
 }
