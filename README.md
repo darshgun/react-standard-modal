@@ -2,14 +2,21 @@
 
 A clean & simple modal component for React.
 
+![npm](https://img.shields.io/npm/v/react-standard-modal) ![npm](https://img.shields.io/npm/dm/react-standard-modal) ![GitHub](https://img.shields.io/github/license/darshgun/react-standard-modal) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-standard-modal)
+
 ## Table of Contents
 
+- [Demos](#demos)
 - [Installation](#installation)
 - [Basic usage](#basic-usage)
 - [API documentation](#api-documentation)
 - [License](#license)
-- [Examples](#examples)
 - [Contributors](#contribute)
+
+## Demos
+
+- [Basic example](https://codesandbox.io/s/react-standard-modal-basic-example-4brrf)
+- [Storybook example](https://codesandbox.io/s/react-standard-modal-storybook-s2mhq)
 
 ## Installation
 
@@ -46,24 +53,25 @@ function App() {
 
 ## API documentation
 
-| Property            | Type   | Default value         | Description                                                                         |
-| ------------------- | ------ | --------------------- | ----------------------------------------------------------------------------------- |
-| **className**       | object |                       | Object that contains custom classes for Modal, Portal & Overlay components          |
-| **container**       | func   | `() => document.body` | Function that returns the dom element which will have the Portal append to it       |
-| **open**            | bool   | `false`               | Describes if the modal should be open or not                                        |
-| **unMountIfClosed** | bool   | `false`               | Describes whether the modal should be removed from dom when closed                  |
-| **style**           | object |                       | Object that contains inline styles objects for Modal, Portal and Overlay components |
-| **disableOverlay**  | bool   | `false`               | Describes whether the Overlay should be shown or not                                |
-| **overlayRef**      | ref    |                       | Overlay ref callback                                                                |
-| **overlayClick**    | func   |                       | Callback fired when clicking on the Overlay component                               |
+| Prop                    | Type                                                 | Required | Description                                                                                 |
+| ----------------------- | ---------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------- |
+| **children**            | node                                                 |          | Provide the contents of your Modal                                                          |
+| **className**           | `{ Modal: string, Overlay: string, Portal: string }` |          | Class names for Modal, Portal and Overlay components                                        |
+| **closeOnOverlayClick** | boolean                                              |          | Todo: Closes the modal when clicking on Overlay.                                            |
+| **disableOverlayClick** | boolean                                              |          | Disables Overlay click                                                                      |
+| **disableOverlay**      | boolean                                              |          | Specify whether Overlay should render or not. If `true`, Overlay component will not render. |
+| **disablePortal**       | boolean                                              |          | If `true`, Modal & Overlay will mount inside the parent component.                          |
+| **onClose**             | function                                             | ✓        | Specify the function that fires on Modal closes.                                            |
+| **onOpen**              | function                                             |          | Specify the function that fires on Modal opens.                                             |
+| **open**                | boolean                                              | ✓        | Specify whether the Modal is currently open.                                                |
+| **overlayClick**        | function                                             |          | Specify the function that fires when clicking on Overlay.                                   |
+| **overlayRef**          | function                                             |          | Ref callback of the Overlay component.                                                      |
+| **style**               | `{ Modal: object, Overlay: object, Portal: object }` |          | Inline styles for Modal, Portal and Overlay components.                                     |
+| **unMountIfClosed**     | boolean                                              |          | If `true`, the modal will not mount to DOM when it's not open.                              |
 
 ## License
 
 [MIT](https://github.com/darshgun/react-standard-modal/blob/master/LICENSE)
-
-## Examples
-
-Coming soon
 
 ## Contribute
 

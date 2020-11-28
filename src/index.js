@@ -135,6 +135,7 @@ export const Modal = forwardRef(function Modal(
           ? { ...styles[namespaces.component], ...style[namespaces.component] }
           : { ...styles.Hidden }
       }
+      ref={ref}
     >
       {children}
     </div>
