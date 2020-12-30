@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 
@@ -9,12 +10,20 @@ const propTypes = {
 /**
  * Modal portal
  */
-const Portal = ({ children, container, disablePortal }) => {
-  if (disablePortal) {
-    return children;
+const Portal = ({ children, disablePortal }) => {
+  const [container, setContainer] = useState();
+
+  useEffect(() => {
+    if (document) {
+      setContainer(document.body);
+    }
+  }, []);
+
+  if (!disablePortal && container) {
+    return createPortal(children, container);
   }
 
-  return createPortal(children, container);
+  return children;
 };
 
 Portal.propTypes = propTypes;
