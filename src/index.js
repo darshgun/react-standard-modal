@@ -20,10 +20,6 @@ const propTypes = {
    */
   closeOnOverlayClick: PropTypes.bool,
   /**
-   * Todo: Specify the `container` that will have the Modal portal appended to it.
-   */
-  container: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
-  /**
    * Disables Overlay click
    */
   disableOverlayClick: PropTypes.bool,
@@ -73,7 +69,6 @@ export const Modal = forwardRef(function Modal(
     children,
     className,
     closeOnOverlayClick,
-    container,
     disableOverlayClick,
     disableOverlay,
     disablePortal,
@@ -91,15 +86,6 @@ export const Modal = forwardRef(function Modal(
    * Internal show state
    */
   const [show, setShow] = useState(false);
-  useEffect(() => {
-    setShow(open);
-
-    if (open) {
-      handleOpen();
-    } else {
-      handleClose();
-    }
-  }, [open, handleOpen, handleClose]);
 
   const handleOpen = () => {
     onOpen();
@@ -115,6 +101,16 @@ export const Modal = forwardRef(function Modal(
       handleClose();
     }
   };
+
+  useEffect(() => {
+    setShow(open);
+
+    if (open) {
+      handleOpen();
+    } else {
+      handleClose();
+    }
+  }, [open, handleOpen, handleClose]);
 
   const modalClasses = cx(
     namespace,
@@ -142,7 +138,7 @@ export const Modal = forwardRef(function Modal(
   );
 
   return !unMountIfClosed || (unMountIfClosed && show) ? (
-    <Portal container={container} disablePortal={disablePortal}>
+    <Portal disablePortal={disablePortal}>
       <div
         className={wrapperClasses}
         style={
@@ -174,7 +170,6 @@ Modal.propTypes = propTypes;
 Modal.defaultProps = {
   className: {},
   closeOnOverlayClick: true,
-  container: document.body,
   open: false,
   onClose: () => {},
   onOpen: () => {},
