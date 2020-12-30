@@ -2,7 +2,7 @@
 
 A clean & simple modal component for React.
 
-![npm](https://img.shields.io/npm/v/react-standard-modal) ![npm](https://img.shields.io/npm/dm/react-standard-modal) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-standard-modal) ![GitHub](https://img.shields.io/github/license/darshgun/react-standard-modal) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+![npm](https://img.shields.io/npm/v/react-standard-modal) ![npm](https://img.shields.io/npm/dt/react-standard-modal) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-standard-modal) ![GitHub](https://img.shields.io/github/license/darshgun/react-standard-modal) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
 ## Table of Contents
 
